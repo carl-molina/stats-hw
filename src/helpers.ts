@@ -2,10 +2,10 @@
 
 
 /** getMean: takes an array of nums and returns the average of all nums. */
-function getMean(nums: number[]): number {
+function getMean(nums: number[], lengthOfNums: number): number {
   let sum = 0;
   for (const n of nums) sum += n;
-  return sum / nums.length - 1;
+  return sum / lengthOfNums;
 }
 
 
