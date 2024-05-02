@@ -185,3 +185,4 @@ describe("getMode w/ multiple modes in array", function () {
     expect(getMode([1, 1, 2, 2, 3, 4, 4, 5, 5])).toEqual([1, 2, 4, 5]);
   });
 });
+
