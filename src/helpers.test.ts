@@ -186,3 +186,33 @@ describe("getMode w/ multiple modes in array", function () {
   });
 });
 
+
+describe("getRange", function () {
+  it("should return range of all positive integers", function () {
+    expect(getRange(allPositiveInts)).toEqual(4);
+  });
+
+  it("should return range of all negative integers", function () {
+    expect(getRange(allNegativeInts)).toEqual(4);
+  });
+
+  it("should return range of all positive and negative ints", function () {
+      expect(getRange(positiveAndNegativeInts)).toEqual(9);
+  });
+
+  it("should return range of all positive floats", function () {
+    expect(getRange(allPositiveFloats)).toEqual(4.4);
+  });
+
+  it("should return range of all negative floats", function () {
+    expect(getRange(allNegativeFloats)).toEqual(4.4);
+  });
+
+  it("should return range of all positive and negative floats", function () {
+      expect(getRange(positiveAndNegativeFloats)).toEqual(9.9);
+  });
+
+  it("should return range of all positive and negative ints and floats", function () {
+      expect(getRange(positiveAndNegativeIntsAndFloats)).toEqual(9.4);
+  });
+});
