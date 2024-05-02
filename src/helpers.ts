@@ -5,7 +5,7 @@
 function getMean(nums: number[], lengthOfNums: number): number {
   let sum = 0;
   for (const n of nums) sum += n;
-  return Number((sum / lengthOfNums).toFixed(4));
+  return Number((sum / lengthOfNums).toFixed(10));
 }
 
 
@@ -15,7 +15,7 @@ function getMedian(nums: number[]): number {
   const mid = Math.floor(nums.length / 2);
 
   if (nums.length % 2 === 0) {
-    return Number(((nums[mid - 1] + nums[mid]) / 2).toFixed(4));
+    return Number(((nums[mid - 1] + nums[mid]) / 2).toFixed(10));
   } else {
     return nums[mid];
   }
