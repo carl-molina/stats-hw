@@ -71,7 +71,7 @@ describe("getSampleStdDev", function () {
 
 describe("getPopulationVariance", function () {
   it("should return correct population variance from std dev", function () {
-    expect(getPopulationSampleVariance(1.4142)).toEqual(1.99996164);
-
+    expect(getPopulationSampleVariance(1.4142135624)).toEqual(2.0000000001);
+    expect(getPopulationSampleVariance(3.2619012861)).toEqual(10.6400000003);
   });
 });
