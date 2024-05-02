@@ -1,7 +1,6 @@
 "use strict";
 
 import { it, expect, describe } from "vitest";
-import { getMean } from "./helpers";
 import {
   getPopulationStdDev,
   getSampleStdDev,
