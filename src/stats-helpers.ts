@@ -36,10 +36,9 @@ function getSampleVariance(stdDev: number): number {
   return stdDev ** 2;
 }
 
-export { getPopulationStdDev, getSampleStdDev, getPopulationVariance, getSampleVariance };
-
-
-
-
-
-
+export {
+  getPopulationStdDev,
+  getSampleStdDev,
+  getPopulationVariance,
+  getSampleVariance
+};
