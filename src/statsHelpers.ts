@@ -7,10 +7,10 @@ import { getMean } from "./helpers";
  *  deviation.
 */
 function getPopulationStdDev(nums: number[]): number {
-  const mean = getMean(nums, nums.length - 1);
+  const mean = getMean(nums, nums.length);
   const squaredDiffs = nums.map(n => (n - mean) ** 2);
-  const meanSquareDiff = getMean(squaredDiffs, squaredDiffs.length - 1);
-  return Math.sqrt(meanSquareDiff);
+  const meanSquareDiff = getMean(squaredDiffs, squaredDiffs.length);
+  return Number(Math.sqrt(meanSquareDiff).toFixed(10));
 }
 
 
@@ -18,32 +18,32 @@ function getPopulationStdDev(nums: number[]): number {
  * Note: sample standard deviation is calculated with n - 1 in the denominator.
 */
 function getSampleStdDev(nums: number[]): number {
-  const mean = getMean(nums, nums.length - 1);
+  const mean = getMean(nums, nums.length);
   const squaredDiffs = nums.map(n => (n - mean) ** 2);
-  const meanSquareDiff = getMean(squaredDiffs, squaredDiffs.length - 2);
-  return Math.sqrt(meanSquareDiff);
+  const meanSquareDiff = getMean(squaredDiffs, squaredDiffs.length - 1);
+  return Number(Math.sqrt(meanSquareDiff).toFixed(10));
 }
 
 
 /** getPopulationVariance: gets number from standard deviation, returns
  *  population standard deviation squared (aka population variance).
  */
-function getPopulationVariance(stdDev: number): number {
-  return stdDev ** 2;
+function getPopulationSampleVariance(stdDev: number): number {
+  return Number((stdDev ** 2).toFixed(10));
 }
 
 
 /** getSampleVariance: gets number from sample standard deviation, returns
  *  sample standard deviation squared (aka sample variance).
  */
-function getSampleVariance(stdDev: number): number {
-  return stdDev ** 2;
-}
+// function getSampleVariance(stdDev: number): number {
+//   return stdDev ** 2;
+// }
+// ^ Potentially not necessary since population variance is same formula.
 
 
 export {
   getPopulationStdDev,
   getSampleStdDev,
-  getPopulationVariance,
-  getSampleVariance
+  getPopulationSampleVariance,
 };
