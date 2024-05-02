@@ -6,3 +6,21 @@
 // type number before doing any calculuations. After you've successfully split
 // the numbers and converted them, you can then do your statistical
 // calculations.)
+
+
+/**  NumbersForm: checks textarea box for input and sends valid data to be
+ *  calculated for statistical purposes.
+ *
+ *  Props:
+ *  - handleSave
+ *
+ *  State:
+ *  - formData
+ *  - validators
+ *
+ *  App -> NumbersForm
+ */
+
+function NumbersForm({ handleSave }) {
+
+}
