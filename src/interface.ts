@@ -1,8 +1,5 @@
 "use strict";
 
-interface I
-
-
 interface IFact {
   fact: {
     fragment: string,
