@@ -1,11 +1,12 @@
 "use strict";
 
 import { it, expect, describe } from "vitest";
-import { getMean,
-   getMedian,
-   getMode,
-   getRange,
-   trimWhitespaceText
+import {
+  getMean,
+  getMedian,
+  getMode,
+  getRange,
+  trimWhitespaceText
 } from "./helpers";
 
 
@@ -28,7 +29,7 @@ describe("getMean", function () {
   });
 
   it("should return average of all positive and negative ints", function () {
-      expect(getMean(positiveAndNegativeInts, positiveAndNegativeInts.length)).toEqual(-0.6);
+    expect(getMean(positiveAndNegativeInts, positiveAndNegativeInts.length)).toEqual(-0.6);
   });
 
   it("should return average of all positive floats", function () {
@@ -40,11 +41,11 @@ describe("getMean", function () {
   });
 
   it("should return average of all positive and negative floats", function () {
-      expect(getMean(positiveAndNegativeFloats, positiveAndNegativeFloats.length)).toEqual(-0.66);
+    expect(getMean(positiveAndNegativeFloats, positiveAndNegativeFloats.length)).toEqual(-0.66);
   });
 
   it("should return average of all positive and negative ints and floats", function () {
-      expect(getMean(positiveAndNegativeIntsAndFloats, positiveAndNegativeIntsAndFloats.length)).toEqual(-0.48);
+    expect(getMean(positiveAndNegativeIntsAndFloats, positiveAndNegativeIntsAndFloats.length)).toEqual(-0.48);
   });
 
 });
@@ -60,7 +61,7 @@ describe("getMedian w/ odd-amount of nums", function () {
   });
 
   it("should return median of all positive and negative ints", function () {
-      expect(getMedian(positiveAndNegativeInts)).toEqual(-1);
+    expect(getMedian(positiveAndNegativeInts)).toEqual(-1);
   });
 
   it("should return median of all positive floats", function () {
@@ -72,11 +73,11 @@ describe("getMedian w/ odd-amount of nums", function () {
   });
 
   it("should return median of all positive and negative floats", function () {
-      expect(getMedian(positiveAndNegativeFloats)).toEqual(-1.1);
+    expect(getMedian(positiveAndNegativeFloats)).toEqual(-1.1);
   });
 
   it("should return median of all positive and negative ints and floats", function () {
-      expect(getMedian(positiveAndNegativeIntsAndFloats)).toEqual(-1);
+    expect(getMedian(positiveAndNegativeIntsAndFloats)).toEqual(-1);
   });
 });
 
@@ -91,7 +92,7 @@ describe("getMedian w/ even-amount of nums", function () {
   });
 
   it("should return median of all positive and negative ints", function () {
-      expect(getMedian([-1, 2, -3, 4, -5, 6])).toEqual(0.5);
+    expect(getMedian([-1, 2, -3, 4, -5, 6])).toEqual(0.5);
   });
 
   it("should return median of all positive floats", function () {
@@ -103,11 +104,11 @@ describe("getMedian w/ even-amount of nums", function () {
   });
 
   it("should return median of all positive and negative floats", function () {
-      expect(getMedian([-1.1, 2.2, -3.3, 4.4, -5.5, 6.6])).toEqual(0.55);
+    expect(getMedian([-1.1, 2.2, -3.3, 4.4, -5.5, 6.6])).toEqual(0.55);
   });
 
   it("should return median of all positive and negative ints and floats", function () {
-      expect(getMedian([-1, 2.2, -3, 4.4, -5, 6.6])).toEqual(0.6);
+    expect(getMedian([-1, 2.2, -3, 4.4, -5, 6.6])).toEqual(0.6);
   });
 });
 
@@ -122,7 +123,7 @@ describe("getMode w/ a mode in array", function () {
   });
 
   it("should return mode of all positive and negative ints", function () {
-      expect(getMode([-1, 2, -3, 4, -5, -5])).toEqual([-5]);
+    expect(getMode([-1, 2, -3, 4, -5, -5])).toEqual([-5]);
   });
 
   it("should return mode of all positive floats", function () {
@@ -134,11 +135,11 @@ describe("getMode w/ a mode in array", function () {
   });
 
   it("should return mode of all positive and negative floats", function () {
-      expect(getMode([-1.1, 2.2, -3.3, 4.4, -5.5, -5.5])).toEqual([-5.5]);
+    expect(getMode([-1.1, 2.2, -3.3, 4.4, -5.5, -5.5])).toEqual([-5.5]);
   });
 
   it("should return mode of all positive and negative ints and floats", function () {
-      expect(getMode([-1, 2.2, -3, 4.4, -5, -5])).toEqual([-5]);
+    expect(getMode([-1, 2.2, -3, 4.4, -5, -5])).toEqual([-5]);
   });
 });
 
@@ -153,7 +154,7 @@ describe("getMode w/out a mode in array", function () {
   });
 
   it("should return no mode w/ all positive and negative ints", function () {
-      expect(getMode(positiveAndNegativeInts)).toEqual("The data set has no mode.");
+    expect(getMode(positiveAndNegativeInts)).toEqual("The data set has no mode.");
   });
 
   it("should return no mode w/ all positive floats", function () {
@@ -165,11 +166,11 @@ describe("getMode w/out a mode in array", function () {
   });
 
   it("should return no mode w/ all positive and negative floats", function () {
-      expect(getMode(positiveAndNegativeFloats)).toEqual("The data set has no mode.");
+    expect(getMode(positiveAndNegativeFloats)).toEqual("The data set has no mode.");
   });
 
   it("should return no mode w/ all positive and negative ints and floats", function () {
-      expect(getMode(positiveAndNegativeIntsAndFloats)).toEqual("The data set has no mode.");
+    expect(getMode(positiveAndNegativeIntsAndFloats)).toEqual("The data set has no mode.");
   });
 });
 
@@ -197,7 +198,7 @@ describe("getRange", function () {
   });
 
   it("should return range of all positive and negative ints", function () {
-      expect(getRange(positiveAndNegativeInts)).toEqual(9);
+    expect(getRange(positiveAndNegativeInts)).toEqual(9);
   });
 
   it("should return range of all positive floats", function () {
@@ -209,11 +210,11 @@ describe("getRange", function () {
   });
 
   it("should return range of all positive and negative floats", function () {
-      expect(getRange(positiveAndNegativeFloats)).toEqual(9.9);
+    expect(getRange(positiveAndNegativeFloats)).toEqual(9.9);
   });
 
   it("should return range of all positive and negative ints and floats", function () {
-      expect(getRange(positiveAndNegativeIntsAndFloats)).toEqual(9.4);
+    expect(getRange(positiveAndNegativeIntsAndFloats)).toEqual(9.4);
   });
 });
 
