@@ -37,3 +37,9 @@ function getSampleVariance(stdDev: number): number {
 }
 
 export { getPopulationStdDev, getSampleStdDev, getPopulationVariance, getSampleVariance };
+
+
+
+
+
+
