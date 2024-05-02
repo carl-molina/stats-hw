@@ -22,9 +22,14 @@ function getMedian(nums: number[]): number {
 }
 
 
-/** getMode: takes an array of nums and returns the most frequent number. */
-function getMode(nums: number[]): number {
+/** getMode: takes an array of nums and returns the most frequent number. If
+ *  there is no mode, it returns a string. If there are multiple modes, it
+ *  returns an array of the modes.
+*/
+function getMode(nums: number[]): string | number[] {
   const freq = new Map<number, number>();
+  let mostFreq = 1;
+  let mostFreqNum = [-Infinity];
 
   for (const n of nums) {
     if (!freq.has(n)) {
@@ -33,9 +38,15 @@ function getMode(nums: number[]): number {
     else {
       freq.set(n, (freq.get(n) as number) + 1);
     }
+    if (freq.get(n) as number > mostFreq) {
+      mostFreq = freq.get(n) as number;
+      mostFreqNum = [n];
+    } else if (mostFreq > 1 && freq.get(n) === mostFreq) {
+      mostFreqNum = [...mostFreqNum, n];
+    }
   }
 
-  return Math.max(...freq.values());
+  return mostFreq === 1 ? "The data set has no mode." : mostFreqNum;
 }
 
 
