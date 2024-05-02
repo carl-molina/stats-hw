@@ -60,7 +60,7 @@ function getRange(nums: number[]): number {
  * textarea box) and returns an array of numbers with whitespaces removed.
  */
 function trimWhitespaceText(text: string): number[] {
-  return text.split(' ').map(n => Number(n));
+  return text.replace(/\s+/g, ' ').trim().split(' ').map(n => Number(n)).filter(n => !isNaN(n));
 }
 
 
