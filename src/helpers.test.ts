@@ -263,5 +263,6 @@ describe("trimWhitespaceText w/ invalid non-number input", function () {
   it("should return array of numbers w/ whitespaces and non-numbers removed", function () {
     expect(trimWhitespaceText("1 a 2 b 3 4 5 c")).toEqual([1, 2, 3, 4, 5]);
     expect(trimWhitespaceText("1 2a 3 4b 5")).toEqual([1, 3, 5]);
+    expect(trimWhitespaceText("1a 2b 3c 4d 5e")).toEqual([]);
   });
 });
